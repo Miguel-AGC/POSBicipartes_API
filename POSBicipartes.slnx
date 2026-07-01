@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="POSBicipartes.API/POSBicipartes.API.csproj" />
+  <Project Path="POSBicipartes.Application/POSBicipartes.Application.csproj" />
+  <Project Path="POSBicipartes.Domain/POSBicipartes.Domain.csproj" />
+  <Project Path="POSBicipartes.Infraestructure/POSBicipartes.Infraestructure.csproj" />
+  <Project Path="POSBicipartes.Shared/POSBicipartes.Shared.csproj" />
+</Solution>
