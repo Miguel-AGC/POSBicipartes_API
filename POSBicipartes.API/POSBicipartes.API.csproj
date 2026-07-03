@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\POSBicipartes.Application\POSBicipartes.Application.csproj" />
+    <ProjectReference Include="..\POSBicipartes.Infraestructure\POSBicipartes.Infraestructure.csproj" />
+    <ProjectReference Include="..\POSBicipartes.Shared\POSBicipartes.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

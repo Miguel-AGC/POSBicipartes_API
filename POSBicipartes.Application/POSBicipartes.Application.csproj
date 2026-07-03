@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\POSBicipartes.Domain\POSBicipartes.Domain.csproj" />
+    <ProjectReference Include="..\POSBicipartes.Shared\POSBicipartes.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
