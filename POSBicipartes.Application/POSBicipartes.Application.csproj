@@ -16,4 +16,13 @@
     <ProjectReference Include="..\POSBicipartes.Shared\POSBicipartes.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Features\" />
+    <Folder Include="Validators\" />
+  </ItemGroup>
+
 </Project>

@@ -4,4 +4,5 @@
   <Project Path="POSBicipartes.Domain/POSBicipartes.Domain.csproj" />
   <Project Path="POSBicipartes.Infraestructure/POSBicipartes.Infraestructure.csproj" />
   <Project Path="POSBicipartes.Shared/POSBicipartes.Shared.csproj" />
+  <Project Path="POSBicipartes.Test/POSBicipartes.Test.csproj" Id="656d61b8-12c2-4287-be0c-68d05852d09a" />
 </Solution>
