@@ -2,7 +2,7 @@
 
 using POSBicipartes.Domain.Common;
 
-public class SystemConfiguration : BaseEntity
+public class SystemConfiguration : AuditableEntity
 {
     public required string BusinessName { get; set; }
 

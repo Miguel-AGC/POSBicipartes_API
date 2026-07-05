@@ -7,8 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="EFCore.NamingConventions" Version="8.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.28" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.28">
       <PrivateAssets>all</PrivateAssets>
@@ -27,7 +28,6 @@
     <Folder Include="Identity\" />
     <Folder Include="Extensions\" />
     <Folder Include="Persistence\Migrations\" />
-    <Folder Include="Persistence\Seed\" />
     <Folder Include="Services\" />
     <Folder Include="Repositories\" />
   </ItemGroup>

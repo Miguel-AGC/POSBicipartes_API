@@ -18,13 +18,42 @@ public class ApplicationDbContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
+        ConfigureConventions(modelBuilder);
     }
 
-    public override async Task<int> SaveChangesAsync(
-    CancellationToken cancellationToken = default)
+    private static void ConfigureConventions(ModelBuilder modelBuilder)
+    {
+        // Todos los decimal serán decimal(18,2)
+        foreach (var property in modelBuilder.Model
+                     .GetEntityTypes()
+                     .SelectMany(e => e.GetProperties())
+                     .Where(p => p.ClrType == typeof(decimal)))
+        {
+            property.SetPrecision(18);
+            property.SetScale(2);
+        }
+    }
+
+    public override int SaveChanges()
+    {
+        ApplyAuditInformation();
+
+        return base.SaveChanges();
+    }
+
+    public override Task<int> SaveChangesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        ApplyAuditInformation();
+
+        return base.SaveChangesAsync(cancellationToken);
+    }
+
+    private void ApplyAuditInformation()
     {
         var entries = ChangeTracker
-            .Entries<BaseEntity>();
+            .Entries<AuditableEntity>();
 
         foreach (var entry in entries)
         {
@@ -39,7 +68,5 @@ public class ApplicationDbContext : DbContext
                     break;
             }
         }
-
-        return await base.SaveChangesAsync(cancellationToken);
     }
 }

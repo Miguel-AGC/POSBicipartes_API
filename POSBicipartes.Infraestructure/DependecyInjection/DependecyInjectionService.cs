@@ -17,7 +17,8 @@ public static class DependencyInjectionService
         {
             options.UseMySql(
                 connectionString,
-                ServerVersion.AutoDetect(connectionString));
+                ServerVersion.AutoDetect(connectionString))
+            .UseSnakeCaseNamingConvention();
         });
 
         return services;
